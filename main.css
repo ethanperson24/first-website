@@ -114,7 +114,6 @@ footer {
 .row1img {
     height: 18vh;
     margin-top: 1.4rem;
-    opacity: 100%;
     margin-right: 3rem;
 }
 .reverse {
@@ -143,7 +142,23 @@ footer {
     h1 span {
         font-size: 1.4rem;
     }
+    .row1img {
+        height: 12vh;
+        margin-top: 1.4rem;
+        margin-right: 1rem;
+    }
+    .row2img {
+        height: 12vh;
+    }
+    .row3img {
+        height: 12vh;
+    }
+    .bottom_container {
+        height: 90vh;
+        margin-top: -3rem;
+    }
 }
+
 
 @media screen and (min-width: 690px) {
     h1 {
