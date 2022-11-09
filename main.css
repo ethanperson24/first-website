@@ -131,6 +131,20 @@ footer {
     border-radius: 10px;
 }
 
+@media screen and (max-width: 420px) {
+    .main_middle {
+        height: 70vh;
+    }
+    h1 {
+        padding-top: 21vh;
+        font-size: 1.7rem;
+        line-height: 1.5rem;
+    }
+    h1 span {
+        font-size: 1.4rem;
+    }
+}
+
 @media screen and (min-width: 690px) {
     h1 {
         padding-top: 30vh;
