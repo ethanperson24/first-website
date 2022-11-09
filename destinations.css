@@ -48,7 +48,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: #cc2f34;
-    margin: 1.5rem;
+    margin: 1.5rem 1.5rem 3rem;
 }
 .title p {
     letter-spacing: 0.4rem;
@@ -65,13 +65,73 @@ body {
 
 /* BELOW targets the CARDS */
 
+.card-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin-left: 10vw;
+}
+.card {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color:#37485a;
+    background: linear-gradient(132deg, #f2f2f2, #d2eefa);
+    background-size: 400% 400%;
+    border-radius: 30px;
+    -webkit-animation: card-background 3s ease infinite;
+    -moz-animation: card-background 3s ease infinite;
+    animation: card-background 3s ease infinite;
+}
 
+.card img {
+    width: 100%;
+    border-radius: 20px;
+}
+.card .label {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+}
+
+@-webkit-keyframes card-background {
+    0%{background-position:0% 88%}
+    50%{background-position:100% 13%}
+    100%{background-position:0% 88%}
+}
+@-moz-keyframes card-background {
+    0%{background-position:0% 88%}
+    50%{background-position:100% 13%}
+    100%{background-position:0% 88%}
+}
+@keyframes card-background {
+    0%{background-position:0% 88%}
+    50%{background-position:100% 13%}
+    100%{background-position:0% 88%}
+}
 
 @media screen and (min-width: 850px) {
-
+    .card-div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        place-items: center;
+    }
 }
 
 @media screen and (min-width: 1300px) {
+    .card-div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     .header {
         margin: 1rem 3rem;
         font-size: 1.3rem;
