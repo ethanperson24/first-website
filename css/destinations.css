@@ -128,6 +128,17 @@ body {
     }
 }
 
+@media screen and (max-width: 460px) {
+    .title p {
+        font-size: 0.8rem;
+    }
+
+    .title h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
 @media screen and (min-width: 1300px) {
     .card-div {
         grid-template-columns: 1fr 1fr 1fr;
