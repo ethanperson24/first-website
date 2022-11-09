@@ -96,6 +96,12 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
     color: transparent;
 }
 
+@media screen and (max-width: 460px) {
+    fieldset {
+        height: 60vh;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .header {
         margin: 1rem 3rem;
