@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/destinations.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="header">
+            <a class="getflyin" href="{{ url_for('index') }}">Get<span>Flyin'</span></a>
+            <nav>
+                <a href="{{ url_for('planner') }}">Planner</a>
+                <a href="{{ url_for('join') }}">Join</a>
+                <a href="{{ url_for('destinations') }}">Destinations</a>
+            </nav>
+        </div>
+        <div class="title">
+            <p>American Airlines</p>
+            <h1>Destinations</h1>
+        </div>
+        <div class="card-div">
+            <div class="card" id="1">
+                <a href="{{ url_for('static', filename='imgs/kef.jpg') }}" target="_blank"><img src="{{ url_for('static', filename='imgs/kef.jpg') }}" alt="Grundarfjordur, Iceland"></a>
+                <div class="label">
+                    <h3>Grundarfjordur, Iceland</h3>
+                    <p>KEF</p>
+                </div>
+            </div>
+            <div class="card" id="2">
+                <a href="{{ url_for('static', filename='imgs/zth.jpg') }}" target="_blank"><img src="{{ url_for('static', filename='imgs/zth.jpg') }}" alt="Zakynthos, Greece"></a>
+                <div class="label">
+                    <h3>Zakynthos, Greece</h3>
+                    <p>ZTH</p>
+                </div>
+            </div>
+            <div class="card" id="3">
+                <a href="{{ url_for('static', filename='imgs/mle.jpg') }}" target="_blank"><img src="{{ url_for('static', filename='imgs/mle.jpg') }}" alt="Ayada Resort, Maldives"></a>
+                <div class="label">
+                    <h3>Ayada Resort, Maldives</h3>
+                    <p>MLE</p>
+                </div>
+            </div>
+            <div class="card" id="4">
+                <a href="{{ url_for('static', filename='imgs/zrh.jpg') }}" target="_blank"><img src="{{ url_for('static', filename='imgs/zrh.jpg') }}" alt="Oeschinensee Lake, Switzerland"></a>
+                <div class="label">
+                    <h3>Oeschinensee Lake, Switzerland</h3>
+                    <p>ZRH</p>
+                </div>
+            </div>
+            <div class="card" id="5">
+                <a href="{{ url_for('static', filename='imgs/phx.jpg') }}" target="_blank"><img src="{{ url_for('static', filename='imgs/phx.jpg') }}" alt="Lake Powell, Utah"></a>
+                <div class="label">
+                    <h3>Lake Powell, Utah</h3>
+                    <p>PHX</p>
+                </div>
+            </div>
+            <div class="card" id="6">
+                <a href="{{ url_for('static', filename='imgs/sjo.jpg') }}" target="_blank"><img src="{{ url_for('static', filename='imgs/sjo.jpg') }}" alt="Art Villas, Costa Rica"></a>
+                <div class="label">
+                    <h3>Art Villas, Costa Rica</h3>
+                    <p>SJO</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

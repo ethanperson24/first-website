@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/planner_submit.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="header">
+            <a class="getflyin" href="{{ url_for('index') }}">Get<span>Flyin'</span></a>
+            <nav>
+                <a href="{{ url_for('planner') }}">Planner</a>
+                <a href="{{ url_for('join') }}">Join</a>
+                <a href="{{ url_for('destinations') }}">Destinations</a>
+            </nav>
+        </div>
+        <div class="title">
+            <p>American Airlines</p>
+            <h1>Get<span>Flyin'</span></h1>
+        </div>
+        <div id="fieldset_container">
+            <fieldset>
+                <div class="grouper">
+                    <h2 class="grouper">Submission Received</h2>
+                    <h6 class="grouper">Please do not refresh as we fetch your results</h6>
+                </div>
+                <p>Start: {{ start }} </p>
+                <p>End: {{ end }} </p>
+                <p>Date: {{ date }} </p>
+                <p>Drive Start: {{ drive_start }}</p>
+                <p>Drive Middle: {{ drive_middle }} </p>
+                <p>Drive End: {{ drive_end }} </p>
+                <p>Max Drive Distance: {{ drive_distance }} mi </p>
+                <p>Layover Allowance: {{ layover }} </p>
+                <p>Next Day Arrival: {{ next_day }} </p>
+            </fieldset>
+        </div>
+    </div>
+{% endblock %}

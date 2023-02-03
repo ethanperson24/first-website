@@ -1,30 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/planner.css">
-    <title>GetFlyin' Travel Planner</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/planner.css') }}">
+{% endblock %}
+
+{% block body %}
     <div class="container">
         <div class="header">
-            <a class="getflyin" href="../index.html">Get<span>Flyin'</span></a>
+            <a class="getflyin" href="{{ url_for('index') }}">Get<span>Flyin'</span></a>
             <nav>
-                <a href="planner.html">Planner</a>
-                <a href="join.html">Join</a>
-                <a href="destinations.html">Destinations</a>
+                <a href="{{ url_for('planner') }}">Planner</a>
+                <a href="{{ url_for('join') }}">Join</a>
+                <a href="{{ url_for('destinations') }}">Destinations</a>
             </nav>
         </div>
         <div class="title">
             <p>American Airlines</p>
             <h1>Get<span>Flyin'</span></h1>
         </div>
-        <form method="post" name="getflyin-search">
+        <form action="/planner/" method="POST" name="getflyin-search">
             <fieldset>
                 <div class="start-div">
                     <label for="start">Start:</label>
@@ -58,13 +52,13 @@
                 </div>
                 <div class="layover">
                     <label>Layover Allowance:</label>
-                        <input type="radio" id="layover0" name="layover">
+                        <input type="radio" id="layover0" name="layover" value="0">
                         <label for="layover0">0</label>
-                        <input type="radio" id="layover1" name="layover">
+                        <input type="radio" id="layover1" name="layover" value="1">
                         <label for="layover1">1</label>
-                        <input type="radio" id="layover2" name="layover">
+                        <input type="radio" id="layover2" name="layover" value="2">
                         <label for="layover2">2</label>
-                        <input type="radio" id="layover3+" name="layover">
+                        <input type="radio" id="layover3+" name="layover" value="3+">
                         <label for="layover3+">3+</label>
                 </div>
                 <div class="next-day">
@@ -74,10 +68,10 @@
                 <button type="submit">Search</button>
                 <div class="footer">
                     <span id="copyRight">© </span>
-                    <span id="currentYear">2022 </span>
+                    <span id="currentYear">2023 </span>
                     EP Advantage LLC, All rights reserved.
                 </div>
             </fieldset>
         </form>
     </div>
-</body>
+{% endblock %}
