@@ -1,23 +1,29 @@
-{% extends 'base.html' %}
-
-{% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-{% endblock %}
-
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>GetFlyin' Travel Planner</title>
+</head>
+<body>
     <div class="bigcontainer">
         <div class="top_container">
             <div class="header">
-            <a class="getflyin" href="{{ url_for('index') }}">Get<span>Flyin'</span></a>
-            <nav>
-                <a href="{{ url_for('planner') }}">Planner</a>
-                <a href="{{ url_for('join') }}">Join</a>
-                <a href="{{ url_for('destinations') }}">Destinations</a>
-            </nav>
-        </div>
+                <a class="getflyin" href="index.html">Get<span>Flyin'</span></a>
+                <nav>
+                    <a href="html/planner.html">Planner</a>
+                    <a href="html/join.html">Join</a>
+                    <a href="html/destinations.html">Destinations</a>
+                </nav>
+            </div>
             <div class="main_middle">
                 <h1>NonRev<span>Made Easy.</span></h1>
-                <img src="{{ url_for('static', filename='imgs/takeoff_cartoon.jpg') }}" alt="American Airlines Logo">
+                <img src="imgs/takeoff_cartoon.jpg" alt="American Airlines Logo">
             </div>
             <footer>
                 <svg class="down-arrow" viewBox="0 0 16 132" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,10 +42,10 @@
                     <h2>Planner</h2>
                     <p>A tool designed to get you to your destination, even if a direct route is not available.</p>
                 </div>
-                <img class="row1img" src="{{ url_for('static', filename='imgs/aa_logo.png') }}" alt="American Airlines logo">
+                <img class="row1img" src="imgs/aa_logo.png" alt="American Airlines logo">
             </div>
             <div class="row reverse">
-                <img class="row2img" src="{{ url_for('static', filename='imgs/ground_crew.jpg') }}" alt="Marshalling in a plane">
+                <img class="row2img" src="imgs/ground_crew.jpg" alt="Marshalling in a plane">
                 <div class="text">
                     <h2>Join AA</h2>
                     <p>Become a part of a the biggest airline in the world. Start flying for free with us today!</p>
@@ -50,8 +56,9 @@
                     <h2>Destinations</h2>
                     <p>Not sure where to fly next? Check out some of the places we've gone!</p>
                 </div>
-                <img class="row3img" src="{{ url_for('static', filename='imgs/aa_travel.jpg') }}" alt="AA plane in sky">
+                <img class="row3img" src="imgs/aa_travel.jpg" alt="AA plane in sky">
             </div>
         </div>
     </div>
-{% endblock %}
+</body>
+</html>
